@@ -15,15 +15,15 @@ let sumProduct = juiceApple+juiceMango+juiceOrange; // Suma productiv.
 
 
 let sumInteger = Math.floor(juiceApple) + Math.floor(juiceMango) + Math.floor(juiceOrange);
-console.log(sumInteger);
+   console.log(sumInteger);
 let sumRounding = Math.round(sumInteger / 100) * 100;
-console.log(sumRounding);
+   console.log(sumRounding);
 
 sumInteger = new Boolean(sumInteger);
  if (sumInteger % 2 === 0) {
- console.log(sumInteger)
+         console.log(sumInteger)
     } else {
- console.log(sumInteger)
+         console.log(sumInteger)
     } 
 
 
