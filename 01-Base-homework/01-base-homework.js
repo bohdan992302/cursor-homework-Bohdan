@@ -2,53 +2,39 @@ const juiceApple = 15.678;
 const juiceMango = 123.965;
 const juiceOrange = 90.2345;
 
-   console.log(Math.max(juiceApple,juiceMango,juiceOrange));
-   console.log(Math.min(juiceApple,juiceMango,juiceOrange));
+   console.log('Найбільше число:' + Math.max(juiceApple,juiceMango,juiceOrange));
+   console.log('Найменше число:' + Math.min(juiceApple,juiceMango,juiceOrange));
 
-let sumProduct = juiceApple+juiceMango+juiceOrange; // Suma productiv.
-   console.log(sumProduct);
+const sumProduct = juiceApple+juiceMango+juiceOrange;
+   console.log('Cума продуктів:' + sumProduct);
 
+const sumInteger = Math.floor(juiceApple) + Math.floor(juiceMango) + Math.floor(juiceOrange);
+   console.log('Сума товарів без копійок:' + sumInteger);
 
-   console.log(Math.floor(juiceApple)); //okruglennya v min 
-   console.log(Math.floor(juiceMango)); 
-   console.log(Math.floor(juiceOrange)); 
+const sumRounding = Math.round(sumInteger / 100) * 100;
+   console.log('Cума товарів округлена до сотень:' + sumRounding);
 
+const isEvenValue = (sumInteger % 2 ===0) ? true: false;
+   console.log('Cума товарів парне чи непарне число?:' + isEvenValue);
 
-let sumInteger = Math.floor(juiceApple) + Math.floor(juiceMango) + Math.floor(juiceOrange);
-   console.log(sumInteger);
-let sumRounding = Math.round(sumInteger / 100) * 100;
-   console.log(sumRounding);
+const moneyCustomer = 500;
+   const restCustomer = moneyCustomer - sumProduct;
+      console.log('Решта клієнта:' + restCustomer);
 
-sumInteger = new Boolean(sumInteger);
- if (sumInteger % 2 === 0) {
-         console.log(sumInteger)
-    } else {
-         console.log(sumInteger)
-    } 
+const averageValue = sumProduct/3;
+   console.log('Середнє значення товарів:' + averageValue.toFixed(2));
 
+const discount = Math.floor(Math.random()*50+1);
+   console.log('Випадкова знижка:' + discount);
 
-let restCustomer = 500 - sumProduct; //reshta kliyenta 
-   console.log(restCustomer);
+const discountValue = sumProduct * discount / 100;
+   console.log('Сума знижки:' + discountValue.toFixed(2));
 
+const payment = sumProduct - discountValue;
+   console.log('Решта клієнта зі знижкою:'+ payment.toFixed(2));
 
-let averageValue = sumProduct/3; // serednye arfmetuchne
-      averageValue = averageValue.toFixed(2);
-         console.log(averageValue);
+const cost = Math.floor(sumProduct)/2;
+   console.log('Собівартість продуктів:'+ cost);
 
-let discount = Math.floor(Math.random()*50+1) // random discount
-   console.log(discount);
-
-
-let discountValue = sumProduct*discount/100;  // suma znujky
-   console.log(discountValue);
-
-let payment = sumProduct - discountValue; // reshta iz znujkoy 
-      payment = payment.toFixed(2); 
-         console.log(payment);
-
-
-let cost = Math.floor(sumProduct)/2;
-   console.log(cost); // sobivartist`
-
-let profit = cost-discount;
-   console.log(profit); // prubytok
+const profit = cost-discount;
+   console.log('Чистий прибуток:' + profit);
